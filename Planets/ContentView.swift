@@ -3,7 +3,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    let planets: [Planet]
+    let planets: [Planet] // you don't need to initialise this if
+    // you are expecting to pass this data around.
 
     var body: some View {
         NavigationView {
@@ -41,6 +42,9 @@ struct PlanetDetails: View {
                 .frame(width: 300, height: 300)
             Text("Name: \(planet.name)")
             Text("Mass: \(planet.mass)")
+            Text("Distance: \(planet.orbitalDistanceInKm) KM")
+            Text("Period: \(planet.orbitalPeriodInDays) days")
+            Text("Temperature Range: \(planet.surfaceTemperatureInCelsius.lowerBound) to \(planet.surfaceTemperatureInCelsius.upperBound)")
         }.navigationBarTitle(planet.name)
     }
 }
