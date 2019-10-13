@@ -13,6 +13,7 @@
 		DCAC89C023529CCA00FC4232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCAC89BF23529CCA00FC4232 /* Assets.xcassets */; };
 		DCAC89C323529CCA00FC4232 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCAC89C223529CCA00FC4232 /* Preview Assets.xcassets */; };
 		DCAC89C623529CCA00FC4232 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCAC89C423529CCA00FC4232 /* LaunchScreen.storyboard */; };
+		DCAC89CE23529FAC00FC4232 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAC89CD23529FAC00FC4232 /* Planet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DCAC89C223529CCA00FC4232 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DCAC89C523529CCA00FC4232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCAC89C723529CCA00FC4232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCAC89CD23529FAC00FC4232 /* Planet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		DCAC89B823529CC900FC4232 /* Planets */ = {
 			isa = PBXGroup;
 			children = (
+				DCAC89CD23529FAC00FC4232 /* Planet.swift */,
 				DCAC89B923529CC900FC4232 /* AppDelegate.swift */,
 				DCAC89BB23529CC900FC4232 /* SceneDelegate.swift */,
 				DCAC89BD23529CC900FC4232 /* ContentView.swift */,
@@ -149,6 +152,7 @@
 				DCAC89BA23529CC900FC4232 /* AppDelegate.swift in Sources */,
 				DCAC89BC23529CC900FC4232 /* SceneDelegate.swift in Sources */,
 				DCAC89BE23529CC900FC4232 /* ContentView.swift in Sources */,
+				DCAC89CE23529FAC00FC4232 /* Planet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
