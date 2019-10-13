@@ -19,7 +19,9 @@ struct RemoteImage: View {
                 .map({ Image(uiImage: $0) })
                 ?? Image(systemName: "photo"))
                 .resizable()
-        }.onAppear(perform: self.viewModel.download)
+        }
+        .onAppear(perform: self.viewModel.download)
+        .onDisappear(perform: self.viewModel.cancelDownload)
     }
 }
 
@@ -52,5 +54,9 @@ private class RemoteImageViewModel: ObservableObject {
             .receive(on: RunLoop.main)
             .assign(to: \RemoteImageViewModel.content, on: self)
             .store(in: &disposeBag)
+    }
+
+    func cancelDownload() {
+        disposeBag.removeAll()
     }
 }
