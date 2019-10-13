@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC3DD7E02352CF5D00FE88FA /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3DD7DF2352CF5D00FE88FA /* AppViewModel.swift */; };
+		DC3DD7E22352D4BA00FE88FA /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3DD7E12352D4BA00FE88FA /* RemoteImage.swift */; };
 		DCAC89BA23529CC900FC4232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAC89B923529CC900FC4232 /* AppDelegate.swift */; };
 		DCAC89BC23529CC900FC4232 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAC89BB23529CC900FC4232 /* SceneDelegate.swift */; };
 		DCAC89BE23529CC900FC4232 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAC89BD23529CC900FC4232 /* ContentView.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC3DD7DF2352CF5D00FE88FA /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		DC3DD7E12352D4BA00FE88FA /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		DCAC89B623529CC900FC4232 /* Planets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCAC89B923529CC900FC4232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCAC89BB23529CC900FC4232 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 		DCAC89B823529CC900FC4232 /* Planets */ = {
 			isa = PBXGroup;
 			children = (
+				DC3DD7DF2352CF5D00FE88FA /* AppViewModel.swift */,
 				DCAC89CD23529FAC00FC4232 /* Planet.swift */,
 				DCAC89B923529CC900FC4232 /* AppDelegate.swift */,
 				DCAC89BB23529CC900FC4232 /* SceneDelegate.swift */,
@@ -66,6 +71,7 @@
 				DCAC89C423529CCA00FC4232 /* LaunchScreen.storyboard */,
 				DCAC89C723529CCA00FC4232 /* Info.plist */,
 				DCAC89C123529CCA00FC4232 /* Preview Content */,
+				DC3DD7E12352D4BA00FE88FA /* RemoteImage.swift */,
 			);
 			path = Planets;
 			sourceTree = "<group>";
@@ -149,8 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC3DD7E02352CF5D00FE88FA /* AppViewModel.swift in Sources */,
 				DCAC89BA23529CC900FC4232 /* AppDelegate.swift in Sources */,
 				DCAC89BC23529CC900FC4232 /* SceneDelegate.swift in Sources */,
+				DC3DD7E22352D4BA00FE88FA /* RemoteImage.swift in Sources */,
 				DCAC89BE23529CC900FC4232 /* ContentView.swift in Sources */,
 				DCAC89CE23529FAC00FC4232 /* Planet.swift in Sources */,
 			);

@@ -3,13 +3,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    let planets: [Planet] // you don't need to initialise this if
-    // you are expecting to pass this data around.
+    @EnvironmentObject var viewModel: AppViewModel
 
     var body: some View {
         NavigationView {
-            List(planets) {
-                PlanetCell(planet: $0)
+            List(viewModel.planets) {
+                PlanetRowView(planet: $0)
             }
         }
     }
@@ -17,11 +16,11 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(planets: loadPlanets().filter({ $0.order < 3 }))
+        ContentView()
     }
 }
 
-struct PlanetCell: View {
+struct PlanetRowView: View {
     let planet: Planet
 
     var body: some View {
@@ -35,15 +34,15 @@ struct PlanetDetails: View {
     let planet: Planet
 
     var body: some View {
-        VStack {
-            Circle()
-                .fill(Color.orange)
+        VStack(alignment: .leading, spacing: 16) {
+            RemoteImage(url: planet.image)
+                .clipShape(Circle())
                 .shadow(radius: 20)
-                .frame(width: 300, height: 300)
-            Text("Name: \(planet.name)")
-            Text("Mass: \(planet.mass)")
+                .frame(width: 248, height: 248)
+            
+            Text("Mass: \(String(format: "%.02e", planet.mass))")
             Text("Distance: \(planet.orbitalDistanceInKm) KM")
-            Text("Period: \(planet.orbitalPeriodInDays) days")
+            Text("Period: \(String(format: "%.02f", planet.orbitalPeriodInDays)) days")
             Text("Temperature Range: \(planet.surfaceTemperatureInCelsius.lowerBound) to \(planet.surfaceTemperatureInCelsius.upperBound)")
         }.navigationBarTitle(planet.name)
     }

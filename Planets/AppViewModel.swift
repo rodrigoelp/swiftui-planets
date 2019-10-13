@@ -1,0 +1,88 @@
+//
+
+import Foundation
+
+class AppViewModel: ObservableObject {
+    let planets: [Planet]
+
+    init() {
+        planets = loadPlanets()
+    }
+}
+
+func loadPlanets() -> [Planet] { // this could easily come from a json file or something.
+    return [
+        Planet(order: 1,
+               name: "Mercury",
+               equatorialDiametreInKm: nil,
+               polarDiametreInKm: nil,
+               mass: 3.29*pow(10, 23),
+               orbitalDistanceInKm: 57909227,
+               orbitalPeriodInDays: 88,
+               surfaceTemperatureInCelsius: -173...427,
+               image: URL(string: "https://space-facts.com/wp-content/uploads/mercury.png")),
+        Planet(order: 2,
+               name: "Venus",
+               equatorialDiametreInKm: nil,
+               polarDiametreInKm: nil,
+               mass: 4.87*pow(10, 24),
+               orbitalDistanceInKm: 108209475,
+               orbitalPeriodInDays: 225,
+               surfaceTemperatureInCelsius: -462...465,
+               image: URL(string: "https://space-facts.com/wp-content/uploads/venus.png")),
+        Planet(order: 3,
+               name: "Earth",
+               equatorialDiametreInKm: 12756,
+               polarDiametreInKm: 12714,
+               mass: 5.97*pow(10, 24),
+               orbitalDistanceInKm: 149598262,
+               orbitalPeriodInDays: 365.24,
+               surfaceTemperatureInCelsius: -88...58,
+               image: URL(string: "https://space-facts.com/wp-content/uploads/earth.png")),
+        Planet(order: 4,
+               name: "Mars",
+               equatorialDiametreInKm: 6792,
+               polarDiametreInKm: 6752,
+               mass: 6.39*pow(10, 23),
+               orbitalDistanceInKm: 227943824,
+               orbitalPeriodInDays: 687,
+               surfaceTemperatureInCelsius: (-87)...(-5),
+               image: URL(string: "https://space-facts.com/wp-content/uploads/mars.jpg")),
+        Planet(order: 5,
+               name: "Jupiter",
+               equatorialDiametreInKm: 142984,
+               polarDiametreInKm: 133709,
+               mass: 1.9*pow(10, 27),
+               orbitalDistanceInKm: 778340821,
+               orbitalPeriodInDays: 4333,
+               surfaceTemperatureInCelsius: (-108)...(-108),
+               image: URL(string: "https://space-facts.com/wp-content/uploads/jupiter.png")),
+        Planet(order: 6,
+               name: "Saturn",
+               equatorialDiametreInKm: 120536,
+               polarDiametreInKm: 108728,
+               mass: 5.68*pow(10, 26),
+               orbitalDistanceInKm: 1426666422,
+               orbitalPeriodInDays: 10756,
+               surfaceTemperatureInCelsius: (-139)...(-139),
+               image: URL(string: "https://space-facts.com/wp-content/uploads/saturn.png")),
+        Planet(order: 7,
+               name: "Uranus",
+               equatorialDiametreInKm: 51118,
+               polarDiametreInKm: 49946,
+               mass: 8.68*pow(10, 25),
+               orbitalDistanceInKm: 2870658186,
+               orbitalPeriodInDays: 30687,
+               surfaceTemperatureInCelsius: (-197)...(-197),
+               image: URL(string: "https://space-facts.com/wp-content/uploads/uranus.jpg")),
+        Planet(order: 8,
+               name: "Neptune",
+               equatorialDiametreInKm: 49528,
+               polarDiametreInKm: 48682,
+               mass: 1.02*pow(10, 26),
+               orbitalDistanceInKm: 4498396441,
+               orbitalPeriodInDays: 60190,
+               surfaceTemperatureInCelsius: (-201)...(-201),
+               image: URL(string: "https://space-facts.com/wp-content/uploads/neptune.png")),
+    ]
+}
